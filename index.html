@@ -3,15 +3,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanidhya Singh Rajawat | Senior Software Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Sanidhya Singh Rajawat | Senior Software Engineer | Available Worldwide</title>
+  <meta name="description" content="Sanidhya Singh Rajawat - Senior Software Engineer specializing in Python, AI/ML, and distributed systems. Available for remote work worldwide. Expert in building scalable applications and leading engineering teams." />
+  <meta name="keywords" content="Sanidhya Singh Rajawat, software engineer, Python developer, AI/ML, distributed systems, remote work, software development, tech lead" />
+  <meta name="author" content="Sanidhya Singh Rajawat" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sanidhyarajawat.github.io/" />
+  <meta property="og:title" content="Sanidhya Singh Rajawat | Senior Software Engineer" />
+  <meta property="og:description" content="Senior Software Engineer specializing in Python, AI/ML, and distributed systems. Available for remote work worldwide." />
+  <meta property="og:image" content="https://sanidhyarajawat.github.io/main_image.jpg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://sanidhyarajawat.github.io/" />
+  <meta property="twitter:title" content="Sanidhya Singh Rajawat | Senior Software Engineer" />
+  <meta property="twitter:description" content="Senior Software Engineer specializing in Python, AI/ML, and distributed systems. Available for remote work worldwide." />
+  <meta property="twitter:image" content="https://sanidhyarajawat.github.io/main_image.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'DM Sans', sans-serif;
-      color: #000;
-      background-color: #fff;
       line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero button:hover {
+      background: #2980b9;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin: 2rem auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .about {
+      text-align: center;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #3498db;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .experience-item {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-left: 4px solid #3498db;
+    }
+
+    .experience-date {
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      padding: 2rem;
+    }
+
+    .skill-item {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-item h3 {
+      font-size: 1.3rem;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .skill-item ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-item li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .skill-item li::before {
+      content: '•';
+      color: #3498db;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .skill-item li:last-child {
+      margin-bottom: 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-item {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-item h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .project-tech span {
+      background: #3498db;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .project-highlights ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .project-highlights li {
+      margin-bottom: 0.5rem;
+      color: #666;
+    }
+
+    .footer {
+      background: #2c3e50;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer h3 {
+      margin-bottom: 1rem;
+    }
+
+    .social-icons {
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #3498db;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      section {
+        margin: 1rem auto;
+      }
     }
 
     section {
@@ -95,6 +352,54 @@
       flex-wrap: wrap;
     }
 
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .project-item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .project-item h3 {
+      margin: 0 0 1rem;
+      color: #000;
+    }
+
+    .project-item p {
+      margin-bottom: 1rem;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-tech span {
+      background: #000;
+      color: #fff;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .project-highlights ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-highlights li {
+      margin-bottom: 0.5rem;
+    }
+
     .footer {
       background: #000;
       color: #fff;
@@ -135,18 +440,21 @@
 <body>
 
   <section class="hero">
-    <img src="main_image.jpg" alt="Sanidhya Singh Rajawat" />
-    <div class="hero-content">
+    <div class="container">
+      <img src="main_image.jpg" alt="Sanidhya Singh Rajawat" />
       <h1>Sanidhya Singh Rajawat</h1>
       <p>Senior Software Engineer</p>
-      <button href="mailto:sanidhyarajawat58@gmail.com">Reach out</button>
+      <button onclick="window.location.href='mailto:sanidhyarajawat58@gmail.com'">Reach out</button>
     </div>
   </section>
 
-  <section class="gray-bg">
-    <div class="about">
+  <section>
+    <div class="container">
       <h2>About Me</h2>
-      <p>Software engineering professional with deep expertise in developing robust, scalable applications. Strong focus on team collaboration, driving projects to successful completion, and adapting to evolving requirements. Experience in building scalable customer-facing applications that are high-performance, highly available, highly transactional, low-latency, and massively distributed.</p>
+      <div class="about">
+        <p>Software engineering professional with deep expertise in developing robust, scalable applications. Strong focus on team collaboration, driving projects to successful completion, and adapting to evolving requirements. Experience in building scalable customer-facing applications that are high-performance, highly available, highly transactional, low-latency, and massively distributed.</p>
+        <p class="tagline">Available to work worldwide remotely</p>
+      </div>
     </div>
   </section>
 
@@ -209,39 +517,135 @@
   </section>
 
   <section>
-    <h2>Skills & Proficiencies</h2>
-    <div class="skills-grid">
-      <div>
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>Python (Django, FastAPI, Flask), JavaScript, TypeScript</li>
-          <li>PostgreSQL, MySQL, MongoDB, Redis</li>
-          <li>LLM, AWS, Docker, Kubernetes</li>
-          <li>System Design, Airflow, TDD, EDA</li>
-        </ul>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-item">
+          <h3>📺 AI YouTube Assistant (CLI-based RAG App)</h3>
+          <p>A command-line tool that allows users to ask natural language questions about any YouTube video. It extracts the video transcript, chunks and embeds the content using OpenAI, and answers user queries via Retrieval-Augmented Generation (RAG).</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>OpenAI</span>
+            <span>LangChain</span>
+            <span>FAISS</span>
+            <span>youtube-transcript-api</span>
+          </div>
+          <div class="project-highlights">
+            <ul>
+              <li>Dynamic transcript ingestion from YouTube</li>
+              <li>Chunking + vector embeddings for context retrieval</li>
+              <li>OpenAI-powered Q&A over video content</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="project-item">
+          <h3>📄 PDF-GPT (Ask PDFs Anything)</h3>
+          <p>A lightweight CLI tool to ask questions about any PDF document using OpenAI. It reads and chunks PDFs, stores embeddings in FAISS, and performs RAG-based Q&A using GPT-3.5.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>PyPDF2</span>
+            <span>OpenAI</span>
+            <span>LangChain</span>
+            <span>FAISS</span>
+          </div>
+          <div class="project-highlights">
+            <ul>
+              <li>Fast PDF parsing and vector store indexing</li>
+              <li>Contextual search and answer generation</li>
+              <li>Can be extended into an API or desktop tool</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Languages</h3>
-        <ul>
-          <li>English (Fluent)</li>
-          <li>Hindi (Native)</li>
-        </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Skills & Proficiencies</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <h3>Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>JavaScript (TypeScript)</li>
+            <li>SQL</li>
+            <li>GoLang</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>Frameworks</h3>
+          <ul>
+            <li>Django</li>
+            <li>FastAPI</li>
+            <li>Aiohttp</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>Databases</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li>Redis</li>
+            <li>DynamoDB</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>Cloud/Infra</h3>
+          <ul>
+            <li>AWS (S3, EC2, RDS, CloudWatch)</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>Data Engineering</h3>
+          <ul>
+            <li>Airflow</li>
+            <li>Spark</li>
+            <li>Airbyte</li>
+            <li>Kafka</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>DevOps/CI</h3>
+          <ul>
+            <li>GitHub Actions</li>
+            <li>Jenkins</li>
+            <li>Terraform</li>
+            <li>ELK</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>System Design</h3>
+          <ul>
+            <li>Scalable microservices</li>
+            <li>Distributed systems</li>
+            <li>API design</li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3>Languages</h3>
+          <ul>
+            <li>English (Fluent)</li>
+            <li>Hindi (Native)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-content">
-      <img src="bottom_image.jpg" alt="Sanidhya Singh Rajawat" />
       <div class="contact">
         <h3>Reach out</h3>
-        <p>Sanidhya Singh Rajawat<br />
-          <a href="mailto:sanidhyarajawat58@gmail.com" style="color: white;">sanidhyarajawat58@gmail.com</a>
-        </p>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/sanidhya-singh-rajawat-8a10b199/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/sanidhyarajawat" target="_blank">GitHub</a>
-          <a href="https://www.instagram.com/sanidhya_rajawat" target="_blank">Instagram</a>
+          <a href="mailto:sanidhyarajawat58@gmail.com">Email</a>
+          <a target="_blank" href="https://www.linkedin.com/in/sanidhya-singh-rajawat-8a10b199/">LinkedIn</a>
+          <a target="_blank" href="https://github.com/sanidhyarajawat">GitHub</a>
         </div>
       </div>
     </div>

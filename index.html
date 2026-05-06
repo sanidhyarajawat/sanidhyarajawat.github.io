@@ -9,656 +9,1042 @@
   <meta name="author" content="Sanidhya Singh Rajawat" />
   <meta name="robots" content="index, follow" />
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sanidhyarajawat.github.io/" />
   <meta property="og:title" content="Sanidhya Singh Rajawat | Senior Software Engineer" />
   <meta property="og:description" content="Senior Software Engineer specializing in Python, AI/ML, and distributed systems. Available for remote work worldwide." />
   <meta property="og:image" content="https://sanidhyarajawat.github.io/main_image.jpg" />
   
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://sanidhyarajawat.github.io/" />
   <meta property="twitter:title" content="Sanidhya Singh Rajawat | Senior Software Engineer" />
   <meta property="twitter:description" content="Senior Software Engineer specializing in Python, AI/ML, and distributed systems. Available for remote work worldwide." />
   <meta property="twitter:image" content="https://sanidhyarajawat.github.io/main_image.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --ink: #1a1a2e;
+      --ink-soft: #3d3d5c;
+      --accent: #e94560;
+      --accent-warm: #f5a623;
+      --surface: #f9f8f6;
+      --white: #ffffff;
+      --border: #e8e5e0;
+      --blue: #2563eb;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f5f5f5;
+      background: var(--surface);
+      color: var(--ink);
+      line-height: 1.7;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
+    /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #2c3e50;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 2rem;
-    }
-
-    .hero button {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      font-weight: 500;
-      background: #3498db;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .hero button:hover {
-      background: #2980b9;
-    }
-
-    section {
-      padding: 4rem 2rem;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      margin: 2rem auto;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .about {
-      text-align: center;
-    }
-
-    .about p {
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 1rem;
-    }
-
-    .tagline {
-      font-size: 1.2rem;
-      color: #3498db;
-      font-weight: 500;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .experience-item {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border-left: 4px solid #3498db;
-    }
-
-    .experience-date {
-      font-weight: 500;
-      color: #666;
-      margin-bottom: 0.5rem;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-      padding: 2rem;
-    }
-
-    .skill-item {
-      background: #f8f9fa;
-      padding: 2rem;
-      border-radius: 15px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .skill-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .skill-item h3 {
-      font-size: 1.3rem;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-    }
-
-    .skill-item ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .skill-item li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      color: #666;
-      font-size: 1.1rem;
-    }
-
-    .skill-item li::before {
-      content: '•';
-      color: #3498db;
-      font-weight: bold;
-      margin-right: 0.5rem;
-    }
-
-    .skill-item li:last-child {
-      margin-bottom: 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .project-item {
-      background: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .project-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-item h3 {
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .project-tech span {
-      background: #3498db;
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-
-    .project-highlights ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
-    }
-
-    .project-highlights li {
-      margin-bottom: 0.5rem;
-      color: #666;
-    }
-
-    .footer {
-      background: #2c3e50;
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer h3 {
-      margin-bottom: 1rem;
-    }
-
-    .social-icons {
-      margin-top: 2rem;
-    }
-
-    .social-icons a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #3498db;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .container {
-        padding: 1rem;
-      }
-
-      section {
-        margin: 1rem auto;
-      }
-    }
-
-    section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .hero img {
-      max-width: 100%;
-      width: 400px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .hero-content {
-      flex: 1;
-    }
-
-    .hero-content h1 {
-      font-size: 2.5rem;
-      margin: 0 0 0.5rem;
-    }
-
-    .hero-content p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-content button {
-      padding: 0.8rem 1.5rem;
-      background: #000;
-      color: #fff;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .gray-bg {
-      background-color: #d4d1cb;
-    }
-
-    .about {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .experience-item {
-      margin-bottom: 2rem;
-    }
-
-    .experience-date {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-
-    .skills-grid {
+      min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      position: relative;
+      overflow: hidden;
     }
 
-    .sample-work {
-      background: #222;
-      color: #fff;
-      padding: 4rem 2rem;
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(233,69,96,0.06) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .work-grid {
+    .hero-left {
+      background: var(--ink);
       display: flex;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4rem;
+      position: relative;
+      overflow: hidden;
     }
 
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      border: 2px solid rgba(233,69,96,0.2);
+    }
+
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      top: -40px; left: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name span { color: var(--accent); }
+
+    .hero-title {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 3rem;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.75);
+      font-size: 0.78rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      padding: 0.85rem 2rem;
+      background: var(--accent);
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(233,69,96,0.35);
+    }
+
+    .btn-ghost {
+      padding: 0.85rem 2rem;
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.5);
+      color: white;
+    }
+
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 3rem;
+      background: var(--surface);
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+    }
+
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: 20px; left: 20px;
+      right: -20px; bottom: -20px;
+      border: 2px solid var(--accent);
+      border-radius: 14px;
+      opacity: 0.3;
+    }
+
+    .hero-photo-wrap img {
+      width: 360px;
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.15);
+    }
+
+    /* ── AI CHAT SECTION ── */
+    .ai-section {
+      background: var(--ink);
+      padding: 6rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .ai-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(233,69,96,0.4), transparent);
+    }
+
+    .ai-bg-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(233,69,96,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ai-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ai-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .ai-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(233,69,96,0.12);
+      border: 1px solid rgba(233,69,96,0.3);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .ai-label::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse-dot 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    .ai-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .ai-title em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .ai-subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.45);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+
+    .ai-suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .ai-chip {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.55);
+      font-size: 0.8rem;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      cursor: default;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .ai-chip:hover {
+      background: rgba(233,69,96,0.1);
+      color: rgba(255,255,255,0.8);
+      border-color: rgba(233,69,96,0.3);
+    }
+
+    /* iframe container */
+    .ai-frame-wrap {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.4), 0 0 0 1px rgba(233,69,96,0.1);
+      position: relative;
+    }
+
+    .ai-frame-top {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.2rem;
+      background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .dot { width: 11px; height: 11px; border-radius: 50%; }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #ffbd2e; }
+    .dot-g { background: #28c840; }
+
+    .ai-frame-url {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 0.28rem 0.75rem;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      margin: 0 0.5rem;
+      font-family: monospace;
+    }
+
+    .ai-frame-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 520px;
+      border: none;
+    }
+
+    .ai-note {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .ai-note a {
+      color: rgba(233,69,96,0.7);
+      text-decoration: none;
+    }
+
+    /* ── SECTION SHELL ── */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 3rem;
+    }
+
+    /* ── ABOUT ── */
+    .about-body {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+
+    .about-avail {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      color: #16a34a;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.45rem 1rem;
+      border-radius: 100px;
+      margin-top: 0.5rem;
+    }
+
+    .avail-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #16a34a;
+      animation: pulse-dot 1.8s ease-in-out infinite;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      margin-top: 0.3rem;
+      font-weight: 400;
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-bg { background: var(--white); }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), rgba(233,69,96,0.1));
+    }
+
+    .tl-item {
+      position: relative;
+      padding: 0 0 2.5rem 2rem;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 8px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .tl-date {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .tl-role {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .tl-company {
+      font-size: 0.9rem;
+      color: var(--blue);
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+
+    .tl-desc {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── PROJECTS ── */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
     }
 
-    .project-item {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .proj-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
 
-    .project-item h3 {
-      margin: 0 0 1rem;
-      color: #000;
+    .proj-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      border-color: rgba(233,69,96,0.25);
     }
 
-    .project-item p {
-      margin-bottom: 1rem;
+    .proj-icon { font-size: 2rem; margin-bottom: 1rem; }
+
+    .proj-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.7rem;
     }
 
-    .project-tech {
+    .proj-desc {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .tech-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
     }
 
-    .project-tech span {
-      background: #000;
-      color: #fff;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
+    .tech-tag {
+      background: rgba(233,69,96,0.07);
+      border: 1px solid rgba(233,69,96,0.15);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 100px;
     }
 
-    .project-highlights ul {
+    .proj-bullets {
       list-style: none;
       padding: 0;
-      margin: 0;
     }
 
-    .project-highlights li {
-      margin-bottom: 0.5rem;
+    .proj-bullets li {
+      font-size: 0.83rem;
+      color: var(--ink-soft);
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.3rem;
     }
 
-    .footer {
-      background: #000;
-      color: #fff;
-      padding: 4rem 2rem;
+    .proj-bullets li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
     }
 
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
+    /* ── SKILLS ── */
+    .skills-bg { background: var(--white); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .skill-card:hover { border-color: rgba(233,69,96,0.3); }
+
+    .skill-cat {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .skill-items {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .skill-pill {
+      font-size: 0.83rem;
+      color: var(--ink-soft);
+      display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 0.4rem;
     }
 
-    .footer img {
-      width: 250px;
-      border-radius: 10px;
+    .skill-pill::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
     }
 
-    .footer .contact {
-      flex: 1;
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--ink);
+      padding: 5rem 2rem 3rem;
     }
 
-    .footer .contact h3 {
-      margin-bottom: 0.5rem;
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
     }
 
-    .social-icons a {
-      margin-right: 1rem;
-      color: #fff;
+    .footer-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.4);
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.6);
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover { color: var(--white); }
+
+    .footer-link-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .footer-copy {
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right { display: none; }
+      .hero-left { padding: 4rem 2rem; }
+      .about-body { grid-template-columns: 1fr; gap: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .ai-frame-wrap iframe { height: 600px; }
+    }
+
+    @media (max-width: 600px) {
+      .skills-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <img src="main_image.jpg" alt="Sanidhya Singh Rajawat" />
-      <h1>Sanidhya Singh Rajawat</h1>
-      <p>Senior Software Engineer</p>
-      <button onclick="window.location.href='mailto:sanidhyarajawat58@gmail.com'">Reach out</button>
+    <div class="hero-left">
+      <p class="hero-eyebrow">Available Worldwide · Remote</p>
+      <h1 class="hero-name">Sanidhya<br />Singh <span>Rajawat</span></h1>
+      <p class="hero-title">Senior Software Engineer · Python · AI/ML · Distributed Systems</p>
+      <div class="hero-badges">
+        <span class="badge">7+ Years Experience</span>
+        <span class="badge">Python & Django</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">LLMs & RAG</span>
+        <span class="badge">Microservices</span>
+        <span class="badge">AWS</span>
+      </div>
+      <div class="hero-cta">
+        <a href="mailto:sanidhyarajawat58@gmail.com" class="btn-primary">Reach out</a>
+        <a href="https://www.linkedin.com/in/sanidhya-singh-rajawat-8a10b199/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
+      </div>
     </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="about">
-        <p>Software engineering professional with deep expertise in developing robust, scalable applications. Strong focus on team collaboration, driving projects to successful completion, and adapting to evolving requirements. Experience in building scalable customer-facing applications that are high-performance, highly available, highly transactional, low-latency, and massively distributed.</p>
-        <p class="tagline">Available to work worldwide remotely</p>
+    <div class="hero-right">
+      <div class="hero-photo-wrap">
+        <img src="main_image.jpg" alt="Sanidhya Singh Rajawat" />
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Experience & Education</h2>
-    <div class="experience-item">
-      <div class="experience-date">2025–Present</div>
-      <div><strong>Senior Full Stack Engineer</strong> – Resilinc</div>
-      <div>
-        Architecting backend systems to support AI-driven supply chain insights,
-        ensuring quick data ingestion. Building a highly scalable Data platform
-        to retrieve data from multiple data sources and
-        provide a unified view to the user.
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="experience-date">2024–2025</div>
-      <div><strong>Senior Software Engineer</strong> – Entrupy</div>
-      <div>
-        Collaborated with cross-functional teams to design a real-time
-        authentication dashboard, leading analytics workflows to surface critical
-        insights. Improved product quality through code reviews and
-        championed Agile practices to streamline development. Enhanced UI
-        performance with a Redis caching layer and WebSocket-powered
-        updates, while integrating AI platforms to accelerate delivery and
-        innovation.
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="experience-date">2022–2024</div>
-      <div><strong>Senior Software Engineer</strong> – Betterworks</div>
-      <div>
-        As a core team member, I led the architecture of key components, built
-        HR Insights modules from scratch, and reduced report times from over
-        an hour to under five minutes. I drove POCs using Spark and Airflow for
-        large-scale analytics, optimized data warehouse logic, and set up
-        Docker-based local environments. I contributed to a scalable, event-
-        driven microservices architecture using Django, FastAPI, and Aiohttp,
-        integrated LLMs like ChatGPT into workflows, and maintained CI/CD
-        pipelines with GitHub Actions.
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="experience-date">2021–2022</div>
-      <div><strong>SDE-2</strong> – Zelthy</div>
-      <div>
-        Led a team of developers building custom healthcare applications and
-        patient care workflows on a Health Cloud platform. Developed client-
-        specific dashboards using Django and managed AWS services to
-        support platform scalability. Designed and implemented a multi-tenant
-        data warehouse from scratch, integrating it with Power BI via APIs to
-        enable advanced analytics and reporting.
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="experience-date">2018–2021</div>
-      <div><strong>Software Engineer</strong> – Karthavya Technologies</div>
-      <div>
-        Built and deployed a web application to manage advertising and billing
-        for news agencies, designing the database architecture from scratch
-        and implementing an async services architecture for background tasks.
-        Worked across the stack using Python, Flask, MongoDB, AngularJS, and
-        jQuery, and managed deployments on on-premises servers.
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="experience-date">2013–2017</div>
-      <div><strong>B.Tech – Computer Science Engineering</strong><br />Rajasthan Institute of Technical University, Jaipur</div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-item">
-          <h3>📺 AI YouTube Assistant (CLI-based RAG App)</h3>
-          <p>A command-line tool that allows users to ask natural language questions about any YouTube video. It extracts the video transcript, chunks and embeds the content using OpenAI, and answers user queries via Retrieval-Augmented Generation (RAG).</p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>OpenAI</span>
-            <span>LangChain</span>
-            <span>FAISS</span>
-            <span>youtube-transcript-api</span>
-          </div>
-          <div class="project-highlights">
-            <ul>
-              <li>Dynamic transcript ingestion from YouTube</li>
-              <li>Chunking + vector embeddings for context retrieval</li>
-              <li>OpenAI-powered Q&A over video content</li>
-            </ul>
-          </div>
+  <!-- ✨ AI CHAT SECTION -->
+  <section class="ai-section">
+    <div class="ai-bg-glow"></div>
+    <div class="ai-inner">
+      <div class="ai-header">
+        <div class="ai-label">Live AI Demo</div>
+        <h2 class="ai-title">Ask Me Anything —<br /><em>Literally</em></h2>
+        <p class="ai-subtitle">I've built an AI assistant trained on my experience. Ask it about my skills, past projects, or why I'd be a great hire.</p>
+        <div class="ai-suggestions">
+          <span class="ai-chip">💬 What's your tech stack?</span>
+          <span class="ai-chip">🚀 Tell me about your biggest impact</span>
+          <span class="ai-chip">🤖 How do you work with AI/LLMs?</span>
+          <span class="ai-chip">🏗️ Describe your system design experience</span>
+          <span class="ai-chip">📊 What's your data engineering background?</span>
         </div>
-        
-        <div class="project-item">
-          <h3>📄 PDF-GPT (Ask PDFs Anything)</h3>
-          <p>A lightweight CLI tool to ask questions about any PDF document using OpenAI. It reads and chunks PDFs, stores embeddings in FAISS, and performs RAG-based Q&A using GPT-3.5.</p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>PyPDF2</span>
-            <span>OpenAI</span>
-            <span>LangChain</span>
-            <span>FAISS</span>
-          </div>
-          <div class="project-highlights">
-            <ul>
-              <li>Fast PDF parsing and vector store indexing</li>
-              <li>Contextual search and answer generation</li>
-              <li>Can be extended into an API or desktop tool</li>
-            </ul>
-          </div>
+      </div>
+
+      <div class="ai-frame-wrap">
+        <div class="ai-frame-top">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+          <span class="ai-frame-url">sanidhyarajawat-sanidhya-experience-chat.hf.space</span>
+        </div>
+        <iframe
+          src="https://sanidhyarajawat-sanidhya-experience-chat.hf.space"
+          frameborder="0"
+          width="100%"
+          height="520"
+          title="Sanidhya's AI Experience Chat"
+        ></iframe>
+      </div>
+
+      <p class="ai-note">Powered by <a href="https://huggingface.co" target="_blank">Hugging Face Spaces</a> · Built with Gradio + LLM</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <p class="section-label">About</p>
+    <h2 class="section-title">Turning complex problems<br />into elegant systems</h2>
+    <div class="about-body">
+      <div class="about-text">
+        <p>Software engineering professional with deep expertise in developing robust, scalable applications. Strong focus on team collaboration, driving projects to successful completion, and adapting to evolving requirements.</p>
+        <p>Experience in building scalable customer-facing applications that are high-performance, highly available, highly transactional, low-latency, and massively distributed.</p>
+        <p>Passionate about integrating AI/LLM capabilities into real products — from RAG pipelines to intelligent dashboards.</p>
+        <div class="about-avail">
+          <span class="avail-dot"></span>
+          Open to remote work worldwide
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-num">7+</div>
+          <div class="stat-label">Years Engineering</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Companies</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">12×</div>
+          <div class="stat-label">Report Speed Gain</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Scale Mindset</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <div class="container">
-      <h2>Skills & Proficiencies</h2>
+  <!-- EXPERIENCE -->
+  <div class="exp-bg">
+    <div class="section">
+      <p class="section-label">Career</p>
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2025 – Present</div>
+          <div class="tl-role">Senior Full Stack Engineer</div>
+          <div class="tl-company">Resilinc</div>
+          <div class="tl-desc">Architecting backend systems to support AI-driven supply chain insights, ensuring quick data ingestion. Building a highly scalable Data platform to retrieve data from multiple sources and provide a unified view to the user.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2024 – 2025</div>
+          <div class="tl-role">Senior Software Engineer</div>
+          <div class="tl-company">Entrupy</div>
+          <div class="tl-desc">Collaborated with cross-functional teams to design a real-time authentication dashboard, leading analytics workflows to surface critical insights. Enhanced UI performance with a Redis caching layer and WebSocket-powered updates, while integrating AI platforms to accelerate delivery.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2022 – 2024</div>
+          <div class="tl-role">Senior Software Engineer</div>
+          <div class="tl-company">Betterworks</div>
+          <div class="tl-desc">Led architecture of key components, built HR Insights modules from scratch, and reduced report times from over an hour to under five minutes. Drove POCs using Spark and Airflow for large-scale analytics, integrated LLMs like ChatGPT into workflows, and maintained CI/CD pipelines with GitHub Actions.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021 – 2022</div>
+          <div class="tl-role">SDE-2</div>
+          <div class="tl-company">Zelthy</div>
+          <div class="tl-desc">Led a team building custom healthcare applications on a Health Cloud platform. Designed and implemented a multi-tenant data warehouse from scratch, integrating it with Power BI via APIs to enable advanced analytics and reporting.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2018 – 2021</div>
+          <div class="tl-role">Software Engineer</div>
+          <div class="tl-company">Karthavya Technologies</div>
+          <div class="tl-desc">Built and deployed a web application to manage advertising and billing for news agencies, implementing async services architecture for background tasks. Worked across the stack using Python, Flask, MongoDB, AngularJS, and jQuery.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2013 – 2017</div>
+          <div class="tl-role">B.Tech – Computer Science Engineering</div>
+          <div class="tl-company">Rajasthan Institute of Technical University, Jaipur</div>
+          <div class="tl-desc">Foundation in algorithms, data structures, distributed systems, and software engineering principles.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <p class="section-label">Projects</p>
+    <h2 class="section-title">Things I've built</h2>
+    <div class="projects-grid">
+      <div class="proj-card">
+        <div class="proj-icon">📺</div>
+        <div class="proj-title">AI YouTube Assistant</div>
+        <div class="proj-desc">A CLI tool that lets users ask natural language questions about any YouTube video using RAG over extracted transcripts.</div>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenAI</span>
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">FAISS</span>
+          <span class="tech-tag">youtube-transcript-api</span>
+        </div>
+        <ul class="proj-bullets">
+          <li>Dynamic transcript ingestion from YouTube</li>
+          <li>Chunking + vector embeddings for context retrieval</li>
+          <li>OpenAI-powered Q&A over video content</li>
+        </ul>
+      </div>
+      <div class="proj-card">
+        <div class="proj-icon">📄</div>
+        <div class="proj-title">PDF-GPT</div>
+        <div class="proj-desc">A lightweight CLI tool to ask questions about any PDF document. Reads and chunks PDFs, stores embeddings in FAISS, and performs RAG-based Q&A using GPT-3.5.</div>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">PyPDF2</span>
+          <span class="tech-tag">OpenAI</span>
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">FAISS</span>
+        </div>
+        <ul class="proj-bullets">
+          <li>Fast PDF parsing and vector store indexing</li>
+          <li>Contextual search and answer generation</li>
+          <li>Extensible into an API or desktop tool</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills-bg">
+    <div class="section">
+      <p class="section-label">Capabilities</p>
+      <h2 class="section-title">Skills & Proficiencies</h2>
       <div class="skills-grid">
-        <div class="skill-item">
-          <h3>Languages</h3>
-          <ul>
-            <li>Python</li>
-            <li>JavaScript (TypeScript)</li>
-            <li>SQL</li>
-            <li>GoLang</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">Languages</div>
+          <div class="skill-items">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript (TypeScript)</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">GoLang</span>
+          </div>
         </div>
-        <div class="skill-item">
-          <h3>Frameworks</h3>
-          <ul>
-            <li>Django</li>
-            <li>FastAPI</li>
-            <li>Aiohttp</li>
-            <li>Node.js</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">Frameworks</div>
+          <div class="skill-items">
+            <span class="skill-pill">Django</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Aiohttp</span>
+            <span class="skill-pill">Node.js</span>
+          </div>
         </div>
-        <div class="skill-item">
-          <h3>Databases</h3>
-          <ul>
-            <li>PostgreSQL</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-            <li>Redis</li>
-            <li>DynamoDB</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">Databases</div>
+          <div class="skill-items">
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">Redis</span>
+            <span class="skill-pill">DynamoDB</span>
+          </div>
         </div>
-        <div class="skill-item">
-          <h3>Cloud/Infra</h3>
-          <ul>
-            <li>AWS (S3, EC2, RDS, CloudWatch)</li>
-            <li>Docker</li>
-            <li>Kubernetes</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">Cloud / Infra</div>
+          <div class="skill-items">
+            <span class="skill-pill">AWS (S3, EC2, RDS, CloudWatch)</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">Kubernetes</span>
+          </div>
         </div>
-        <div class="skill-item">
-          <h3>Data Engineering</h3>
-          <ul>
-            <li>Airflow</li>
-            <li>Spark</li>
-            <li>Airbyte</li>
-            <li>Kafka</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">Data Engineering</div>
+          <div class="skill-items">
+            <span class="skill-pill">Airflow</span>
+            <span class="skill-pill">Spark</span>
+            <span class="skill-pill">Airbyte</span>
+            <span class="skill-pill">Kafka</span>
+          </div>
         </div>
-        <div class="skill-item">
-          <h3>DevOps/CI</h3>
-          <ul>
-            <li>GitHub Actions</li>
-            <li>Jenkins</li>
-            <li>Terraform</li>
-            <li>ELK</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">DevOps / CI</div>
+          <div class="skill-items">
+            <span class="skill-pill">GitHub Actions</span>
+            <span class="skill-pill">Jenkins</span>
+            <span class="skill-pill">Terraform</span>
+            <span class="skill-pill">ELK</span>
+          </div>
         </div>
-        <div class="skill-item">
-          <h3>System Design</h3>
-          <ul>
-            <li>Scalable microservices</li>
-            <li>Distributed systems</li>
-            <li>API design</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">System Design</div>
+          <div class="skill-items">
+            <span class="skill-pill">Scalable microservices</span>
+            <span class="skill-pill">Distributed systems</span>
+            <span class="skill-pill">API design</span>
+          </div>
         </div>
-        <div class="skill-item">
-          <h3>Languages</h3>
-          <ul>
-            <li>English (Fluent)</li>
-            <li>Hindi (Native)</li>
-          </ul>
+        <div class="skill-card">
+          <div class="skill-cat">Languages</div>
+          <div class="skill-items">
+            <span class="skill-pill">English (Fluent)</span>
+            <span class="skill-pill">Hindi (Native)</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-content">
-      <div class="contact">
-        <h3>Reach out</h3>
-        <div class="social-icons">
-          <a href="mailto:sanidhyarajawat58@gmail.com">Email</a>
-          <a target="_blank" href="https://www.linkedin.com/in/sanidhya-singh-rajawat-8a10b199/">LinkedIn</a>
-          <a target="_blank" href="https://github.com/sanidhyarajawat">GitHub</a>
-        </div>
+    <div class="footer-inner">
+      <div>
+        <h3 class="footer-heading">Let's work<br />together.</h3>
+        <p class="footer-sub">Open to remote senior/lead engineering roles worldwide. Quick to onboard, strong communicator, and builder of things that scale.</p>
+        <a href="mailto:sanidhyarajawat58@gmail.com" class="btn-primary">Send an email ↗</a>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:sanidhyarajawat58@gmail.com" class="footer-link">
+          <span class="footer-link-icon">✉️</span>
+          sanidhyarajawat58@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/sanidhya-singh-rajawat-8a10b199/" target="_blank" class="footer-link">
+          <span class="footer-link-icon">💼</span>
+          linkedin.com/in/sanidhya-singh-rajawat
+        </a>
+        <a href="https://github.com/sanidhyarajawat" target="_blank" class="footer-link">
+          <span class="footer-link-icon">🐙</span>
+          github.com/sanidhyarajawat
+        </a>
       </div>
     </div>
+    <div class="footer-copy">© 2025 Sanidhya Singh Rajawat · Built with intention.</div>
   </footer>
 
 </body>
